@@ -1,0 +1,406 @@
+
+<style type="text/css">
+  .container-fluid{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  /*General Styling*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+*{ font-family:'Open Sans', sans-serif;font-size: 18px;}
+body { margin: 0; padding:0; background: #f1f1f1;}
+
+#SiteWrapper { padding: 2.5em 8em; margin: 1em; background: #fff; border: 2px solid #a5a5a5;}
+#SearchContainer { padding: 1em 0;}
+#SearchInput {}
+
+/*Form Design*/
+.group{ 
+    position:relative;
+    margin-bottom:55px;
+}
+input {
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid #ccc;
+}
+input:focus {
+    outline:none;
+}
+/* Label Design */
+ label {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+/* Active state */
+ input:focus ~ label, input:valid ~ label {
+    top:-20px;
+    font-size:14px;
+    color:#22A7F0;
+}
+/* Underlining Bars */
+ .bar {
+    position:relative;
+    display:block;
+    width:100%;
+}
+.bar:before, .bar:after {
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background:#22A7F0;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%;
+}
+/* active state */
+ input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+/* Highlighter */
+ .highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+/* active state */
+ input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+/** Animations **/
+ @-webkit-keyframes inputHighlighter {
+    from {
+        background:#5264AE;
+    }
+    to {
+        width:0;
+        background:transparent;
+    }
+}
+@-moz-keyframes inputHighlighter {
+    from {
+        background:#5264AE;
+    }
+    to {
+        width:0;
+        background:transparent;
+    }
+}
+@keyframes inputHighlighter {
+    from {
+        background:#5264AE;
+    }
+    to {
+        width:0;
+        background:transparent;
+    }
+}
+#Send{ 
+    width: 100%; padding: 1em 0; cursor: pointer; border: 0; color: #fff; background: #22A7F0;
+    -webkit-transition: all .5s;-moz-transition: all .5s;transition: all .5s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+#Send:hover{ 
+    background: #62c0f4;
+    overflow: hidden;
+}
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+  
+
+.panel-featured-primary {
+    border-color: #08c;
+}
+
+.panel-featured-left {
+    border-left: 3px solid #33353f;
+        border-radius: 8px;
+}
+
+.panel-body {
+    background: #fdfdfd;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    border-radius: 5px;
+}
+
+
+.widget-summary {
+    display: table;
+    width: 100%;
+}
+
+.widget-summary .widget-summary-col.widget-summary-col-icon {
+    width: 1%;
+}
+
+.widget-summary .widget-summary-col {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+}
+
+
+.widget-summary .summary-icon {
+    margin-right: 8px;
+        margin-left: 8px;
+        margin-top: 8px;
+    font-size: 42px;
+    font-size: 4.2rem;
+    width: 60px;
+    height: 60px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 55px;
+    border-radius: 55px;
+}
+
+
+.widget-summary .widget-summary-col {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+}
+
+
+.widget-summary .summary {
+    min-height: 65px;
+    word-break: break-all;
+}
+
+
+.widget-summary .summary .title {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.widget-summary .summary .info {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.widget-summary .summary .amount {
+    margin-right: .2em;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    vertical-align: middle;
+}
+
+
+.widget-summary .summary .info span {
+    vertical-align: middle;
+}
+.summary-icon  i
+{
+    font-size: 35px;  
+}
+
+.widget-summary .summary-footer {
+    padding: 8px 8px 8px;
+    border-top: 1px dotted #ddd;
+    text-align: right;
+        font-size: 12px;
+}
+</style>
+  
+    <div class="container-fluid">
+      
+       
+      <div class="row" style="margin-top: 5%;">
+      <div class="col-md-2">
+        <div class="vertical-menu">
+          <a href="#" class="active">Home</a>
+          <a href="#">Change password</a>
+          <a href="#">Profile</a>
+          <a href="#">Sales</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <!-- <div id="SiteWrapper">
+            <div id="SearchContainer">
+                <form>
+                     <h3 style="text-align: center;">You are logged in!</h3>
+                     <h6 style="text-align: center;">Email:example@mail.com</h6>
+                     <h6 style="text-align: center;">Rank:Administrator</h6>
+                    <button type="submit" id="Send">Logout</button>
+                </form>
+            </div>
+        </div> -->
+
+
+
+            <div class="row">
+        <!-- <div class="col-md-12">
+            <h4>Dashboard</h4>
+        </div>         -->
+    
+  <div class="pos_relative">
+      <div class="col-md-12">
+    <div class="row">                 
+    <div class="col-md-3 col-lg-3 col-xl-3">
+    <section class="panel panel-featured-left panel-featured-primary">
+        <div class="panel-body">
+            <div class="widget-summary">
+                <div class="widget-summary-col widget-summary-col-icon">
+                    <div class="summary-icon bg-primary">
+                        <i class="fa fa-life-ring"></i>
+                    </div>
+                </div>
+                <div class="widget-summary-col">
+                    <div class="summary">
+                        <h4 class="title">Support Questions</h4>
+                        <div class="info">
+                            <strong class="amount">1281</strong>
+                            <span class="text-primary">(14 unread)</span>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <a href="/" class="text-muted text-uppercase">(view all)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+
+    <div class="col-md-3 col-lg-3 col-xl-3">
+        <section class="panel panel-featured-left panel-featured-primary">
+            <div class="panel-body">
+                <div class="widget-summary">
+                    <div class="widget-summary-col widget-summary-col-icon">
+                        <div class="summary-icon bg-primary">
+                            <i class="fa fa-life-ring"></i>
+                        </div>
+                    </div>
+                    <div class="widget-summary-col">
+                        <div class="summary">
+                            <h4 class="title">Support Questions</h4>
+                            <div class="info">
+                                <strong class="amount">1281</strong>
+                                <span class="text-primary">(14 unread)</span>
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            <a href="/" class="text-muted text-uppercase">(view all)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="col-md-3 col-lg-3 col-xl-3">
+        <section class="panel panel-featured-left panel-featured-primary">
+            <div class="panel-body">
+                <div class="widget-summary">
+                    <div class="widget-summary-col widget-summary-col-icon">
+                        <div class="summary-icon bg-primary">
+                            <i class="fa fa-life-ring"></i>
+                        </div>
+                    </div>
+                    <div class="widget-summary-col">
+                        <div class="summary">
+                            <h4 class="title">Support Questions</h4>
+                            <div class="info">
+                                <strong class="amount">1281</strong>
+                                <span class="text-primary">(14 unread)</span>
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            <a href="/" class="text-muted text-uppercase">(view all)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="col-md-3 col-lg-3 col-xl-3">
+        <section class="panel panel-featured-left panel-featured-primary">
+            <div class="panel-body">
+                <div class="widget-summary">
+                    <div class="widget-summary-col widget-summary-col-icon">
+                        <div class="summary-icon bg-primary">
+                            <i class="fa fa-life-ring"></i>
+                        </div>
+                    </div>
+                    <div class="widget-summary-col">
+                        <div class="summary">
+                            <h4 class="title">Support Questions</h4>
+                            <div class="info">
+                                <strong class="amount">1281</strong>
+                                <span class="text-primary">(14 unread)</span>
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            <a href="/" class="text-muted text-uppercase">(view all)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+        </div>
+        </div>
+        </div>
+    </div>
+
+
+      </div>
+       
+
+      </div>
+
+    </div>
